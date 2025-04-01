@@ -1,6 +1,6 @@
 {
-    "name": "Roy Sheppard",
-    "profilePictureUrl": "images/pictures/avatar.png",
+    "name": "RAVOAVAHY Niriantso Anthony Stéphen",
+    "profilePictureUrl": "images/pictures/avatar.jpeg",
 
     "locales": {
         "en": {
@@ -15,7 +15,7 @@
 
         "fr": {
             "credits": "Conçu par <strong><a href='https://github.com/ryanbalieiro'>Ryan Balieiro</a></strong>",
-            "role": "Designer UX"
+            "role": "Développeur Full Stack"
         },
 
         "zh": {
