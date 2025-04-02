@@ -2,10 +2,10 @@
     <Article class="article-portfolio"
              :model="model">
         <div class="article-portfolio-content-wrapper">
-            <FilterTabs :categories="filterTabsCategories"
+            <!-- <FilterTabs :categories="filterTabsCategories"
                         :selected-category-id="selectedCategoryId"
                         class="mt-lg-3"
-                        @select="_onCategorySelected"/>
+                        @select="_onCategorySelected"/> -->
 
             <div class="items-grid">
                 <div v-for="(item, index) in filteredItems">
@@ -80,7 +80,8 @@ const filterTabsCategories = computed(() => {
 })
 
 const _getCategoryName = (categoryId) => {
-    return localize(props.model.locales, "category_" + categoryId)
+    // return localize(props.model.locales, "category_" + categoryId)
+    return categoryId
 }
 
 const _filterProjectsBy = (categoryId) => {

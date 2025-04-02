@@ -46,18 +46,28 @@ const setSelectedLanguageWithId = (languageId) => {
  * @param {String} key
  * @param {Boolean} [returnNullIfNotFound=false]
  */
-const localize = (locales, key, returnNullIfNotFound) => {
-    if(!locales)
-        return ''
+ const localize = (locales, key, returnNullIfNotFound) => {
+    if (!locales) return null;
+    
+    // Cas spécial pour les références
+    if (key === 'reference') {
+        // Si c'est déjà un objet référence, on le retourne
+        if (locales.reference && typeof locales.reference === 'object') {
+            return locales.reference;
+        }
+        // Sinon, on retourne null pour éviter les chaînes non désirées
+        return null;
+    }
+    
+    // Logique normale pour les autres champs
+    const translation = locales.getTranslation(key, selectedLanguage.value, defaultLanguage.value);
+    
+    if (typeof translation !== 'string') return translation;
+    if (translation.includes('locales.')) return returnNullIfNotFound ? null : translation;
+    
+    return translation;
+};
 
-    const translation = locales.getTranslation(key, selectedLanguage.value, defaultLanguage.value)
-    if(!translation.includes('locales.'))
-        return translation
-
-    return returnNullIfNotFound ?
-        null :
-        translation
-}
 
 /**
  * @param {String} key
@@ -92,7 +102,7 @@ provide("defaultLanguage", defaultLanguage)
 provide("setSelectedLanguageWithId", setSelectedLanguageWithId)
 provide("localize", localize)
 provide("localizeFromStrings", localizeFromStrings)
-provide("localizeDate", localizeDate)
+provide("localizeDate", localizeDate);
 </script>
 
 <style lang="scss" scoped>

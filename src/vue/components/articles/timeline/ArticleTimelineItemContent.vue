@@ -15,6 +15,30 @@
             </div>
         </div>
 
+        <!-- Bouton pour afficher/masquer les références -->
+        <button v-if="referenceDetails" class="btn btn-outline-primary mt-2" @click="toggleReferences">
+            {{ showReferences ? 'Masquer le référence' : 'Voir référence' }}
+        </button>
+
+        <!-- Bloc Références -->
+        <div v-if="showReferences && referenceDetails" class="card mt-2">
+            <div class="card-body">
+                <strong>Référence :</strong> <br>
+                <template v-if="referenceDetails.name">
+                    <i class="fa-solid fa-user"></i> {{ referenceDetails.name }} <br>
+                </template>
+                <template v-if="referenceDetails.job">
+                    <i class="fas fa-briefcase"></i> {{ referenceDetails.job }} <br>
+                </template>
+                <template v-if="reference.email">
+                    <i class="fa-solid fa-envelope"></i> <a :href="'mailto:' + referenceDetails.email"> {{ referenceDetails.email }}</a> <br>
+                </template>
+                <template v-if="reference.phone">
+                    <i class="fa-solid fa-phone"></i> <a :href="'tel:' + referenceDetails.phone"> {{ referenceDetails.phone }}</a>
+                </template>
+            </div>
+        </div>
+
         <div class="timeline-item-content-body">
             <p class="text-4 text-default description m-0"
                v-html="description"/>
@@ -28,7 +52,7 @@
 </template>
 
 <script setup>
-import {computed, inject} from "vue"
+import {computed, inject, ref} from "vue"
 import InlineInfoList from "/src/vue/components/widgets/InlineInfoList.vue"
 import InfoBadge from "/src/vue/components/widgets/InfoBadge.vue"
 import Tags from "/src/vue/components/widgets/Tags.vue"
@@ -41,11 +65,43 @@ const props = defineProps({
     country: String,
     institution: String,
     description: String,
-    tags: Object|String
+    tags: Object|String,
+    reference: {
+        type: [Object, null],
+        default: null,
+        validator: (value) => {
+            return value === null || (
+                typeof value === 'object' && 
+                (value.name || value.email || value.phone)
+            );
+        }
+    }
 })
 
 /** @type {{value: Boolean}} */
 const isScreenXlOrLarger = inject("isScreenXlOrLarger")
+const showReferences = ref(false);
+
+const toggleReferences = () => {
+    showReferences.value = !showReferences.value;
+};
+
+const referenceDetails = computed(() => {
+
+    if (!props.reference) return null;
+    
+    // Si c'est un objet valide
+    if (typeof props.reference === 'object' && (props.reference.name || props.reference.email)) {
+        return props.reference;
+    }
+    
+    // Si c'est une chaîne "locales.reference", on la filtre
+    if (typeof props.reference === 'string' && props.reference.includes('locales.')) {
+        return null;
+    }
+    
+    return props.reference;
+});
 
 const parsedTags = computed(() => {
     if(Array.isArray(props.tags))

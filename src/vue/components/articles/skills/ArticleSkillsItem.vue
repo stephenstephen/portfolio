@@ -46,10 +46,19 @@
 
             <!-- Description -->
             <div class="skills-item-description">
-                <p class="text-2 m-0"
-                   :class="experienceTimeDisplay || !progressBarAllowed ? `text-light-7` : ``"
-                   v-html="localize(item.locales, 'description', true)"/>
+                <ul v-if="Array.isArray(localize(item.locales, 'description', true))">
+                    <li v-for="(desc, index) in localize(item.locales, 'description', true)" 
+                        :key="index"
+                        class="text-2 m-0"
+                        :class="experienceTimeDisplay || !progressBarAllowed ? `text-light-7` : ``">
+                        {{ desc }}
+                    </li>
+                </ul>
+                <p v-else class="text-2 m-0"
+                :class="experienceTimeDisplay || !progressBarAllowed ? `text-light-7` : ``"
+                v-html="localize(item.locales, 'description', true)"/>
             </div>
+
         </div>
     </div>
 </template>
@@ -209,5 +218,9 @@ div.skills-item-description {
         md:     (margin-top: 3px),
         sm:     (margin-top: 2px),
     ));
+
+    ul {
+        padding-left: 1.2rem;
+    }
 }
 </style>

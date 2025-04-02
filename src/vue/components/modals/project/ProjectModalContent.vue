@@ -9,7 +9,8 @@
              class="tags-wrapper text-3 mt-2 mt-lg-3">
             <span class="d-none d-lg-inline">
                 <i class="fa-solid fa-tag opacity-75"/>
-                {{localizeFromStrings("tags")}}:
+                <!-- {{localizeFromStrings("tags")}}: -->
+                 Stack:
             </span>
 
             <Tags class="mt-1 mt-lg-0" :tags="parsedTags"/>
@@ -24,6 +25,8 @@
                 </h5>
 
                 <p class="text-2 mb-0" v-html="block.description"/>
+
+                <p v-if="block?.information && block.information !== 'locales.information' && block.information.trim() !== ''" class="alert alert-primary mt-2" v-html="block.information"></p>
 
                 <SocialLinks v-if="block.links"
                              :items="block.links"
@@ -63,6 +66,7 @@ const parsedTags = computed(() => {
 
 const blocks = computed(() => {
     const description = localize(props.item.locales, "description")
+    const information = localize(props.item.locales, "information")
     const links = props.item.links
 
     return [
@@ -72,6 +76,7 @@ const blocks = computed(() => {
             title: localizeFromStrings("about"),
             titleFaIcon: "fa-solid fa-file",
             description: description,
+            information: information,
             links: null
         },
 

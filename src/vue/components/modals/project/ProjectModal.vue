@@ -19,13 +19,35 @@
             <!-- Content -->
             <ProjectModalContent :item="item"/>
         </div>
+
+        <div v-if="item?.print" class="container my-4">
+            <div class="accordion" id="projectAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" @click="isOpen = !isOpen">
+                            📷 {{ isOpen ? 'Fermer' : 'Ouvrir' }} l'aperçu du projet
+                        </button>
+                    </h2>
+                    <div v-show="isOpen" class="accordion-collapse">
+                        <div class="accordion-body text-center">
+                            <ImageView :src="item?.print"
+                                       alt="Aperçu du projet"
+                                       :resolve-path="true"
+                                       class="img-fluid rounded shadow-lg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </Modal>
 </template>
 
 <script setup>
 import Modal from "/src/vue/components/modals/base/Modal.vue"
 import IconView from "/src/vue/components/widgets/IconView.vue"
+import ImageView from "/src/vue/components/widgets/ImageView.vue"
 import ProjectModalContent from "/src/vue/components/modals/project/ProjectModalContent.vue"
+import { ref } from 'vue';
 
 const props = defineProps({
     /** @type {ArticleItem} **/
@@ -35,11 +57,13 @@ const props = defineProps({
     },
 })
 
+const isOpen = ref(false);
 const emit = defineEmits(['close'])
 
 const _onClose = () => {
    emit("close")
-}
+};
+
 </script>
 
 <style lang="scss" scoped>
@@ -86,4 +110,16 @@ div.project-modal-icon-view {
     font-size: calc(var(--dimension)/2);
     margin: var(--margin);
 }
+
+.image-section {
+    text-align: center; /* Centre tout le contenu */
+    margin-top: 20px;
+}
+
+.image-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacement avant l'image */
+}
+
 </style>

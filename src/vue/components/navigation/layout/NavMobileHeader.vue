@@ -8,8 +8,8 @@
                         :include-toggle-button="false"
                         @toggle="null"/>
 
-        <LanguagePicker :shrink="true"
-                        :class="utils.isChromeOS() ? `language-picker-left` : `language-picker-right`"/>
+        <!-- <LanguagePicker :shrink="true"
+                        :class="utils.isChromeOS() ? `language-picker-left` : `language-picker-right`"/> -->
     </nav>
 </template>
 

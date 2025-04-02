@@ -5,6 +5,7 @@ export default class ArticleItem {
     constructor(data) {
         this._id = data.id
         this._img = data.img
+        this._print = data.print
         this._fallbackFaIcon = data['fallbackFaIcon']
         this._fallbackFaIconColor = data['fallbackFaIconColor']
         this._dateStart = data['dateStart']
@@ -23,6 +24,11 @@ export default class ArticleItem {
     /** @return {String} */
     get img() {
         return this._img
+    }
+
+    /** @return {String} */
+    get print() {
+        return this._print
     }
 
     /** @return {String} */

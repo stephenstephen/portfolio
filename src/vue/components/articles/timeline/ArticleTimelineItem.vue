@@ -16,6 +16,7 @@
                                     :country="localize(item.locales, 'country', true)"
                                     :institution="localize(item.locales, 'institution')"
                                     :description="localize(item.locales, 'description')"
+                                    :reference="getValidReference(item.locales)"
                                     :tags="localize(props.item.locales, 'tags')"/>
     </li>
 </template>
@@ -37,7 +38,29 @@ const props = defineProps({
 const localize = inject("localize")
 
 /** @type {Function} */
-const localizeDate = inject("localizeDate")
+const localizeDate = inject("localizeDate");
+
+const getValidReference = (locales) => {
+    if (!locales || !locales._localesHash) {
+        // console.warn('Structure des locales invalide');
+        return null;
+    }
+
+    // Accès direct à la référence française ou anglaise
+    const ref = locales._localesHash.fr?.reference || 
+                locales._localesHash.en?.reference;
+
+    // console.log('Référence extraite:', ref);
+
+    // Validation de la référence
+    if (ref && typeof ref === 'object') {
+        return ref;
+    }
+
+    // console.warn('Aucune référence valide trouvée');
+    return null;
+};
+
 </script>
 
 <style lang="scss" scoped>
