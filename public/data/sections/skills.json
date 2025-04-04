@@ -328,6 +328,24 @@
                         }
                     }
                 },
+                {
+                    "id": 2,
+                    "dateStart": {"year": 2024, "month": 4},
+                    "img": null,
+                    "fallbackFaIcon": "fa-solid fa-hdd",
+                    "fallbackFaIconColor": null,
+                    "percentage": 75,
+                    "locales": {
+                        "en": {
+                            "title": "NoSQL",
+                            "description": "Skilled in managing MySQL databases, including schema design and query optimization."
+                        },
+                        "fr": {
+                            "title": "NoSQL",
+                            "description": "Compétent dans la gestion de bases de données NoSQL (MongoDB, IndexedDB)"
+                        }
+                    }
+                },
 
                 {
                     "id": 2,
