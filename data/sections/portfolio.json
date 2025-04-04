@@ -161,12 +161,36 @@
                         "fr": {
                             "title": "Graphic Réseau",
                             "description": "<b>Graphic Réseau</b> expert imprimantes & traceurs grand format, écrans pour la retouche photo et outils de calibration à votre service depuis 1990",
-                            "tags": ["Magento 2", "mysql", "php"]
+                            "tags": ["Magento 2", "Mysql", "php"]
                         }
                     },
                     "links": [
                         {"faIcon": "fas fa-globe", "href": "https://www.graphic-reseau.com/", "stringKey": "view_on_link"}
                     ]
+                },
+
+                {
+                    "id": 6,
+                    "img": "images/portfolio/prophot.png",
+                    "fallbackFaIcon": "",
+                    "fallbackFaIconColor": null,
+                    "category": "Celaneo Paris",
+                    "locales": {
+                        "en": {
+                            "title": "Prophot",
+                            "description": "Step into the electrifying world of rock music with <b>RockVerse</b>! This app is a haven for rock enthusiasts, offering a vast collection of classic and modern rock tracks, curated playlists, and behind-the-scenes content. Whether you're a die-hard fan or just discovering the genre, <b>RockVerse</b> brings you closer to the heart and soul of rock and roll. Crank up the volume and let the rock 'n' roll spirit run wild!",
+                            "tags": ["app", "music", "rock", "entertainment"]
+                        },
+                        "fr": {
+                            "title": "Prophot",
+                            "description": "Depuis 40 ans, <b>Prophot</b> importe des quatre coins du monde, des équipements et des solutions que nos équipes proposent aux professionnels des métiers de la chaîne de l’image comme la photo, la vidéo, l’image virtuelle 3D, l’événementiel, la post production, l’impression, la numérisation du patrimoine, l’e-commerce… Pionnière dans son domaine d’expertise, elle fut la première à introduire la photo numérique auprès des photographes professionnels dans les années 90, en France.",
+                            "tags": ["Prestashop", "Mysql", "php"]
+                        }
+                    }
+                    ,
+                    "links": [
+                        {"faIcon": "fas fa-globe", "href": "https://www.prophot.com/", "stringKey": "view_on_link"}
+                    ]                
                 },
 
                 {
@@ -188,7 +212,10 @@
                             "information": "Ce projet est en cours de finalisation et sera prochainement disponible.",
                             "tags": ["Wordpress", "mysql", "php"]
                         }
-                    }                },
+                    }                
+                },
+
+                
 
                 {
                     
