@@ -65,7 +65,7 @@
                         "fr": {
                             "title": "CETIM - Data CID",
                             "description": "Le <b>CETIM</b> , Centre Technique des Industries Mécaniques, est un institut technologique labellisé Carnot et membre de l'Alliance Industrie du Futur. C'est le centre d'expertise mécanique français.",
-                            "information": "Ce projet est en cours de finalisation et sera prochainement disponible.",
+                            "information": "Ce projet est une version Back Office",
                             "tags": ["react", "symfony - api plateform", "bootstrap"]
                         }
                     },
