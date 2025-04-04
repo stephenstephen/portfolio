@@ -447,7 +447,7 @@
                     "img": null,
                     "fallbackFaIcon": "fa-brands fa-wordpress",
                     "fallbackFaIconColor": null,
-                    "percentage": 40,
+                    "percentage": 50,
                     "locales": {
                         "en": {
                             "title": "PHP",

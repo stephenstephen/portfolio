@@ -20,7 +20,7 @@
             <ProjectModalContent :item="item"/>
         </div>
 
-        <div v-if="item?.print" class="container my-4">
+        <div v-if="item?.print" class="container mb-4">
             <div class="accordion" id="projectAccordion">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">

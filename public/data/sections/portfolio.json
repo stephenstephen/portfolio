@@ -170,6 +170,28 @@
                 },
 
                 {
+                    "id": 6,
+                    "img": "images/portfolio/wow.png",
+                    "print": "images/portfolio/wow3D.png",
+                    "fallbackFaIcon": "",
+                    "fallbackFaIconColor": null,
+                    "category": "Celaneo Paris",
+                    "locales": {
+                        "en": {
+                            "title": "WOW",
+                            "description": "Step into the electrifying world of rock music with <b>RockVerse</b>! This app is a haven for rock enthusiasts, offering a vast collection of classic and modern rock tracks, curated playlists, and behind-the-scenes content. Whether you're a die-hard fan or just discovering the genre, <b>RockVerse</b> brings you closer to the heart and soul of rock and roll. Crank up the volume and let the rock 'n' roll spirit run wild!",
+                            "tags": ["app", "music", "rock", "entertainment"]
+                        },
+                        "fr": {
+                            "title": "WOW",
+                            "description": "Commandez des figurines 3D haute qualité inspirées de Warcraft Rumble, imprimées à partir de modèles sous licence Creative Commons, pour matérialiser grâce à la technologie d'impression 3D.",
+                            "information": "Ce projet est en cours de finalisation et sera prochainement disponible.",
+                            "tags": ["Magento 2", "mysql", "php"]
+                        }
+                    }                },
+
+                {
+                    
                     "id": 7,
                     "img": "images/portfolio/pi_planner_logo.png",
                     "fallbackFaIcon": "fa-solid fa-hippo",
