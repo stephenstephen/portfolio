@@ -23,7 +23,6 @@
         <!-- Bloc Références -->
         <div v-if="showReferences && referenceDetails" class="card mt-2">
             <div class="card-body">
-                <strong>Référence :</strong> <br>
                 <template v-if="referenceDetails.name">
                     <i class="fa-solid fa-user"></i> {{ referenceDetails.name }} <br>
                 </template>
