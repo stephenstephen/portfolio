@@ -261,8 +261,7 @@
                         }
                     },
                     "links": [
-                        {"faIcon": "fas fa-globe", "href": "https://www.facs-patrimoine-ferroviaire.fr/", "stringKey": "view_on_link"},
-                        {"faIcon": "fas fa-window-maximize", "href": "https://si.facs-patrimoine-ferroviaire.fr/", "stringKey": "view_on_link"}
+                        {"faIcon": "fas fa-globe", "href": "https://www.facs-patrimoine-ferroviaire.fr/", "stringKey": "view_on_link"}
                     ]
                 },
 
