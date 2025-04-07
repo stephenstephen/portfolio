@@ -241,7 +241,7 @@
                     "img": null,
                     "fallbackFaIcon": "fa-brands fa-vuejs",
                     "fallbackFaIconColor": null,
-                    "percentage": 50,
+                    "percentage": 60,
                     "locales": {
                         "en": {
                             "title": "Vue 3",
@@ -260,7 +260,7 @@
                     "img": null,
                     "fallbackFaIcon": "fa-brands fa-react",
                     "fallbackFaIconColor": null,
-                    "percentage": 90,
+                    "percentage": 100,
                     "locales": {
                         "en": {
                             "title": "React",
@@ -372,7 +372,7 @@
                     "img": null,
                     "fallbackFaIcon": "fa-brands fa-laravel",
                     "fallbackFaIconColor": null,
-                    "percentage": 90,
+                    "percentage": 100,
                     "locales": {
                         "en": {
                             "title": "Laravel",
@@ -391,7 +391,7 @@
                     "img": null,
                     "fallbackFaIcon": "fa-brands fa-symfony",
                     "fallbackFaIconColor": null,
-                    "percentage": 90,
+                    "percentage": 100,
                     "locales": {
                         "en": {
                             "title": "Symfony",
@@ -410,7 +410,7 @@
                     "img": null,
                     "fallbackFaIcon": "fa-brands fa-node",
                     "fallbackFaIconColor": null,
-                    "percentage": 90,
+                    "percentage": 100,
                     "locales": {
                         "en": {
                             "title": "NodeJS",
@@ -446,7 +446,7 @@
                     "img": null,
                     "fallbackFaIcon": "fab fa-magento",
                     "fallbackFaIconColor": null,
-                    "percentage": 75,
+                    "percentage": 80,
                     "locales": {
                         "en": {
                             "title": "MySQL",
