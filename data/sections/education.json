@@ -66,6 +66,35 @@
                             "tags": []
                         }
                     }
+                },
+
+                {
+                    "id": 3,
+                    "dateStart": {"year": 2016, "month": 3},
+                    "dateEnd": {"year": 2016, "month": 10},
+                    "img": "images/places/CNTEMAD.jpeg",
+                    "fallbackFaIcon": null,
+                    "fallbackFaIconColor": null,
+
+                    "locales": {
+                        "en": {
+                            "title": "Master's in Human-Computer Interaction",
+                            "description": "Completed an intensive program focusing on user-centered design principles, usability testing, and interaction design. Developed skills in wireframing, prototyping, and user research methodologies.",
+                            "province": "Antananarivo",
+                            "country": "Madagascrar",
+                            "institution": "University of Paris",
+                            "tags": []
+                        },
+
+                        "fr": {
+                            "title": "Master 1 en Informatique Réseau Système",
+                            "description": "Master 1 en Informatique Réseau Système, une formation avancée spécialisée dans la conception et l'optimisation d'infrastructures IT complexes, avec une forte dimension projet et recherche appliquée.",
+                            "province": "Antananarivo",
+                            "country": "Madagascrar",
+                            "institution": "CNTEMAD - Centre de Téléenseignement de Madagascar", 
+                            "tags": []
+                        }
+                    }
                 }
             ]
         }
