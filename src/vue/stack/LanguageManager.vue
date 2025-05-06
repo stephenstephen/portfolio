@@ -11,7 +11,7 @@ const settings = inject("settings")
 /** @type {{value:Locales}} */
 const strings = inject("strings")
 
-const supportedLanguages = settings.value.supportedLanguages
+const supportedLanguages = settings.value.supportedLanguages.filter(language => !language.id.startsWith('en'))
 const defaultLanguage = ref(null)
 const selectedLanguage = ref(null)
 const localStorageId = "language-manager"
